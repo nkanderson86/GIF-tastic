@@ -6,14 +6,17 @@ animalArr = [
     "pandas",
     "otters",
     "turtles",
-    "lizards",
+    "goats",
+    "hippos",
+    "hamsters",
+    "kangaroos",
 ];
 
 // Create function to render buttons 
 makeButtons = function () {
     for (var i = 0; i < animalArr.length; i++) {
         var newButton = $("<button>");
-        newButton.addClass("animal-btn btn btn-secondary btn-sm m-2");
+        newButton.addClass("animal-btn btn btn-secondary m-2");
         newButton.attr("animal-name", animalArr[i]);
         newButton.text(animalArr[i]);
         $(".buttonsContainer").append(newButton);
@@ -48,9 +51,9 @@ fetchGIF = function () {
             var results = response.data
 
             for (var i = 0; i < results.length; i++) {
-                var gifDiv = $("<div>");
+                var gifDiv = $("<div>").addClass("justify-content-between m-3");
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating);
+                var p = $("<p>").text("Rating: " + rating).addClass("text-uppercase");
                 var animalGIF = $("<img>");
                 animalGIF.attr("src", results[i].images.fixed_height_still.url)
                 animalGIF.attr("data-still", results[i].images.fixed_height_still.url);
@@ -59,8 +62,9 @@ fetchGIF = function () {
                 animalGIF.addClass('animal-image');
 
                 // Append GIFs to newly created div
-                gifDiv.append(p);
                 gifDiv.append(animalGIF);
+                gifDiv.append(p);
+
 
                 // Prepend GIFs to container 
                 $("#gifs-container").prepend(gifDiv);

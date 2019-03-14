@@ -1,0 +1,12 @@
+.navbar {
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    font-family: 'Acme', sans-serif;
+    background-image: url(/Assets/Images/soft_circle_scales_@2X.png)
+}
+
+p {
+    text-align: center;
+}
