@@ -1,22 +1,21 @@
 
 // initial array of topics 
 animalArr = [
-    "kittens",
-    "puppies",
-    "pandas",
-    "otters",
-    "turtles",
-    "goats",
-    "hippos",
-    "hamsters",
-    "kangaroos",
+    "Gettin Jiggy With It",
+    "James Brown",
+    "Michael Jackson",
+    "Prince",
+    "Morris Day",
+    "Funkadelic",
+    "Boogie",
+    "Thriller",
 ];
 
 // Create function to render buttons 
 makeButtons = function () {
     for (var i = 0; i < animalArr.length; i++) {
         var newButton = $("<button>");
-        newButton.addClass("animal-btn btn btn-secondary m-2");
+        newButton.addClass("animal-btn btn btn-secondary m-2 text-uppercase");
         newButton.attr("animal-name", animalArr[i]);
         newButton.text(animalArr[i]);
         $(".buttonsContainer").append(newButton);
