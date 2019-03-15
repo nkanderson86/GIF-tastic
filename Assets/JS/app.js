@@ -29,6 +29,7 @@ $("#new-button").on("click", function (event) {
     var addAnimal = $("#new-animal").val();
     animalArr.push(addAnimal);
     console.log(animalArr);
+    $("#new-animal").val("");
     makeButtons();
     // add line here to reset input box after new animal is submitted
     // add if statement to prevent duplicate entries

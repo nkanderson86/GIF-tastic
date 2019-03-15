@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Acme', sans-serif;
-    background-image: url(/Assets/Images/soft_circle_scales_@2X.png)
+    background-image: url("../Images/escheresque.png");
 }
 
 p {
