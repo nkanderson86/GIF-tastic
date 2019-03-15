@@ -6,7 +6,7 @@ animalArr = [
     "Michael Jackson",
     "Prince",
     "Morris Day",
-    "Funkadelic",
+    "Rick James",
     "Boogie",
     "Thriller",
 ];
